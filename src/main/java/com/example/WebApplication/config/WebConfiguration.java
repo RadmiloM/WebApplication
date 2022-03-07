@@ -44,7 +44,6 @@ public class WebConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/api/v1/secure/hello").hasAuthority("USER")
                 .antMatchers("/api/v1/Admin").hasAuthority("ADMIN")
-                .antMatchers("/translate").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic();
